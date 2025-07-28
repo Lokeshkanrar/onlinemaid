@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Order Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f0f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(124, 58, 237, 0.1);
+      border-top: 5px solid #7c3aed;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4c1d95;
+      margin-bottom: 30px;
+    }
+
+    .product {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .product img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .product h3 {
+      margin: 15px 0 5px;
+      color: #5b21b6;
+    }
+
+    .product p {
+      color: #555;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      color: #4c1d95;
+      font-weight: 500;
+    }
+
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    form input:focus,
+    form textarea:focus,
+    form select:focus {
+      border-color: #7c3aed;
+      outline: none;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #7c3aed;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6d28d9;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .product img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Book Your Maid Now</h2>
+
+    <div class="product">
+      <img src="C:\Users\LOKESH KANRAR\OneDrive\ドキュメント\Website\asset\trisha poojary 2.jpg" alt="Product Image">
+      <h3>Online Maid</h3>
+      <p>Free On First Visit. ₹1000/-</p>
+    </div>
+
+    <form action="cart.html" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="address"> Residential Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="Service">Special Service</label>
+      <select id="Service" name="Service" required>
+        <option value="">-- Select --</option>
+        <option value="Kitchen Cleaning">Kitchen Cleaning</option>
+        <option value="Bathroom Cleaning">Bathroom Cleaning</option>
+        <option value="Full house cleaning">Full house Cleaning</option>
+      </select>
+
+      <label for="payment">Payment Mode</label>
+      <select id="payment" name="payment" required>
+        <option value="">-- Select --</option>
+        <option value="upi">UPI</option>
+        <option value="cod">COD (Cash On Delivery)</option>
+        <option value="card">Debit/Credit Card</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+</body>
+</html>

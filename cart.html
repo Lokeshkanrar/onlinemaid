@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f0f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(124, 58, 237, 0.1);
+      border-top: 5px solid #7c3aed;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4c1d95;
+      margin-bottom: 30px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .cart-item div {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .quantity input {
+      width: 60px;
+      padding: 6px;
+      font-size: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .total {
+      text-align: right;
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #5b21b6;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #7c3aed;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #6d28d9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Your Cart</h2>
+
+    <div class="cart-item">
+      <div>Digital T-Shirt (₹499)</div>
+      <div class="quantity">
+        Qty: <input type="number" id="qty" min="1" value="1" onchange="updateTotal()">
+      </div>
+    </div>
+
+    <div class="total">
+      Total: ₹<span id="total">499</span>
+    </div>
+
+    <a href="thank.html" class="btn">Click Here</a>
+  </div>
+
+  <script>
+    const price = 499;
+    function updateTotal() {
+      const qty = document.getElementById("qty").value;
+      document.getElementById("total").innerText = price * qty;
+    }
+  </script>
+
+</body>
+</html>
